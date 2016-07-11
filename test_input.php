@@ -1,5 +1,6 @@
 //prevents XSS by trimming special characters
-//that could introduce third party code
+//prevents SQL injection into forms by stripping 
+//characters that could introduce third party code
 function test_input($data){
 	// Fix &entity\n;
 	$data = str_replace(array('&amp;','&lt;','&gt;'), array('&amp;amp;','&amp;lt;','&amp;gt;'), $data);
